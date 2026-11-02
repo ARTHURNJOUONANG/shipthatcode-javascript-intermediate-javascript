@@ -1,0 +1,5 @@
+Dog > Animal > Object.prototype
+eats -> Dog (0)
+eats -> Dog (1)
+barks -> Dog (1)
+lives -> Animal (2)

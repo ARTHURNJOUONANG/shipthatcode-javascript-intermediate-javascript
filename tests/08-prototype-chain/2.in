@@ -1,0 +1,10 @@
+Animal: eats lives
+Dog < Animal: barks eats
+Puppy < Dog: plays
+Bare < null: x
+Mixin: helper
+chain Dog
+? Dog eats
+? Puppy eats
+? Puppy barks
+? Puppy lives

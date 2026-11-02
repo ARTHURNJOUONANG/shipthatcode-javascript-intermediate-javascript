@@ -1,0 +1,5 @@
+enter
+let t 5
+print t
+exit
+print t

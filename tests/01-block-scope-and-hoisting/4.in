@@ -1,0 +1,5 @@
+let a 1
+enter
+set a 9
+exit
+print a

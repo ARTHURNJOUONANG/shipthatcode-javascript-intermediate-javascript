@@ -1,0 +1,6 @@
+let x 10
+enter
+let x 20
+print x
+exit
+print x

@@ -1,0 +1,4 @@
+OK 5
+FAIL RangeError: odd number: 7
+FAIL TypeError: not an integer: abc
+tries: 3

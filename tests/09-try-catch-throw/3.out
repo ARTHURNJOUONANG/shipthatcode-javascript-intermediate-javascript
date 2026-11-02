@@ -1,0 +1,3 @@
+FAIL thrown number: 42
+FAIL thrown object: [object Object]
+tries: 2

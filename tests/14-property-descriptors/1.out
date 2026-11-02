@@ -1,0 +1,14 @@
+keys: host,port
+json: {"host":"db","port":"5432"}
+id: cfg-1
+summary: host=db;port=5432
+change host: TypeError
+add: TypeError
+delete: TypeError
+overwrite id: TypeError
+change base: ok
+late in cfg: false
+host flags: w=false e=true c=false
+id flags: w=false e=false c=false
+summary: get=function set=undefined e=false
+frozen: true

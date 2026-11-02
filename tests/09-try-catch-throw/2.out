@@ -1,0 +1,4 @@
+OK 2
+FAIL thrown string: quit requested
+unexpected: unknown command: foo
+tries: 3

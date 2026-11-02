@@ -1,0 +1,5 @@
+evaluating util
+evaluating config
+evaluating logger
+evaluating app
+app -> name,version

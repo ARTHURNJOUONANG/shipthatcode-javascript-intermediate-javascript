@@ -1,0 +1,14 @@
+keys: name
+json: {"name":"ada"}
+id: cfg-1
+summary: name=ada
+change name: TypeError
+add: TypeError
+delete: TypeError
+overwrite id: TypeError
+change base: ok
+late in cfg: false
+name flags: w=false e=true c=false
+id flags: w=false e=false c=false
+summary: get=function set=undefined e=false
+frozen: true

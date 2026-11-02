@@ -1,0 +1,5 @@
+Animal: eats
+Dog < Animal: barks
+Puppy < Dog: plays
+chain Puppy
+? Puppy eats

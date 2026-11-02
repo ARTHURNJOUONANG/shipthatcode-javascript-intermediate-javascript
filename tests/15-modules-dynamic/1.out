@@ -1,0 +1,5 @@
+evaluating config
+config -> debug,level
+evaluating logger
+logger -> level,log
+config -> debug,level
