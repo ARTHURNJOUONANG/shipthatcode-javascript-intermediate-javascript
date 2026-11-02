@@ -1,32 +1,35 @@
-function memoize(fn) {
-  const cache = new Map();
-  return function (value) {
-    if (cache.has(value)) return cache.get(value);
-    const result = fn(value);
-    cache.set(value, result);
-    return result;
+const lines = require('fs').readFileSync(0, 'utf8').trim().split('\n');
+const capacity = Number(lines[0]);
+
+const stack = (function (limit) {
+  const items = [];
+  return {
+    push(value) {
+      if (items.length >= limit) return false;
+      items.push(value);
+      return true;
+    },
+    pop() {
+      return items.pop();
+    },
+    peek() {
+      return items.length === 0 ? undefined : items[items.length - 1];
+    },
+    size() {
+      return items.length;
+    },
   };
+})(capacity);
+
+for (const line of lines.slice(1)) {
+  if (line.startsWith('push ')) {
+    console.log(stack.push(line.slice(5)) ? 'ok' : 'full');
+  } else if (line === 'pop' || line === 'peek') {
+    const value = stack[line]();
+    console.log(value === undefined ? 'empty' : value);
+  } else if (line === 'size') {
+    console.log(stack.size());
+  } else if (line === 'api') {
+    console.log(Object.keys(stack).join(','));
+  }
 }
-
-let squareCalls = 0;
-let cubeCalls = 0;
-
-function square(n) {
-  squareCalls += 1;
-  return n * n;
-}
-
-function cube(n) {
-  cubeCalls += 1;
-  return n * n * n;
-}
-
-const memoSquare = memoize(square);
-const memoCube = memoize(cube);
-
-const numbers = require('fs').readFileSync(0, 'utf8').trim().split(/\s+/).map(Number);
-for (const n of numbers) {
-  console.log(n + ' ' + memoSquare(n) + ' ' + memoCube(n));
-}
-console.log('square calls: ' + squareCalls);
-console.log('cube calls: ' + cubeCalls);
